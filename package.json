@@ -9,8 +9,14 @@
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "nodemon server.js",
     "client": "nodemon start-client.js",
-    "test-integration": "./node_modules/.bin/mocha ./test/database-setup.js \"./server/**/*.i-specs.js\"",
-    "ti": "./node_modules/.bin/mocha ./test/database-setup.js \"./server/**/*.i-specs.js\" || true"
+    "test-integration":
+      "./node_modules/.bin/mocha ./test/database-setup.js \"./server/**/*.i-specs.js\"",
+    "ti":
+      "./node_modules/.bin/mocha ./test/database-setup.js \"./server/**/*.i-specs.js\" || true",
+    "test-acceptance":
+      "./node_modules/.bin/mocha ./test/database-setup.js \"./server/**/*.a-specs.js\"",
+    "ta":
+      "./node_modules/.bin/mocha ./test/database-setup.js \"./server/**/*.a-specs.js\" || true"
   },
   "author": "Amy Dredge",
   "license": "ISC",
@@ -23,6 +29,7 @@
     "uuid": "^3.1.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
     "express": "^4.15.3",
