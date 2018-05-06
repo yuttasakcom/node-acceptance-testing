@@ -1,19 +1,19 @@
-'use strict'
+"use strict";
 
 module.exports = {
   development: {
-    db: 'mongodb://localhost/todo',
+    db: "mongodb://mongo:27017/todo",
     port: process.env.PORT || 3001,
-    userCookieName: 'user'
+    userCookieName: "user"
   },
   test: {
-    db: 'mongodb://localhost/todo-integration',
+    db: "mongodb://mongo:27017/todo-integration",
     port: process.env.PORT || 3001,
-    userCookieName: 'user'
+    userCookieName: "user"
   },
   production: {
     // db: 'mongodb://localhost/todo',
     // port: process.env.PORT || 80,
     // userCookieName: 'user'
   }
-}
+};
